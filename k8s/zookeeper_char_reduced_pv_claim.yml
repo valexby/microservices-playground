@@ -1,0 +1,4 @@
+persistence:
+  size: 20Mi
+  dataLogDir:
+    size: 20Mi

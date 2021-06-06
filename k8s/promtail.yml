@@ -1,0 +1,6 @@
+collector:
+  resources:
+    limits:
+      memory: 200Mi
+
+lokiUrl: http://init-loki/loki/api/v1/push

@@ -1,0 +1,4 @@
+collector:
+  resources:
+    limits:
+      memory: 800Mi

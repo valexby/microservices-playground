@@ -1,0 +1,19 @@
+server:
+  global:
+    scrape_interval: 15s
+    evaluation_interval: 15s
+
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'producerapp'
+    metrics_path: '/prometheus'
+    static_configs:
+    - targets: ['dockerhost:8080']
+  - job_name: 'consumerapp'
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['dockerhost:8082']
+  - job_name: 'analyticsapp'
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['dockerhost:8084']
